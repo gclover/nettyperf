@@ -1,4 +1,4 @@
-package nettyperf;
+package nettyperf.http;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.Channel;
@@ -20,7 +20,7 @@ public class PerfServer {
 					.channel(NioServerSocketChannel.class)
 					.childHandler(new PerfServerInitializer());
 			
-			Channel channel = bootstrap.bind(8000).sync().channel();
+			Channel channel = bootstrap.bind(10080).sync().channel();
 			channel.closeFuture().sync();
 		} catch (InterruptedException e) {
 			e.printStackTrace();

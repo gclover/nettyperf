@@ -1,4 +1,4 @@
-package nettyperf;
+package nettyperf.http;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
